@@ -1,0 +1,22 @@
+create database HomeworkDB
+create table Students (ID int, FullName varchar(50),Age int,GPA decimal(3,2))
+
+Alter table Students
+add Email varchar (50)
+
+sp_rename 'Students.FullName','Name','Column'
+
+Alter table Students 
+drop column Age
+
+insert into Students values (1,'Anna',(3.8),'ann@.ru')
+insert into Students values (2,'Dana',(3.7),'dn@.ru')
+insert into Students values (3,'John',(3.5),'jn@.ru')
+
+truncate table Students
+
+
+second part of the hometask--/*Query writing*/
+select @@SERVERNAME
+select GETDATE()
+select * from Students
